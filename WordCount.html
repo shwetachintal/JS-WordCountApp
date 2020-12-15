@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Word Count App</title>
+	</head>
+	<body style="background-color: #FA8072">
+		<h1 style="text-align:center">Type a word in box below</h1>
+		<input id = 'inputWord'type="text" style="width:80%; padding: 12px 20px; margin: 50px 150px 50px 100px ;
+		display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;" placeholder="Type here...">
+		<input id='result' type= "hidden"style="margin-left: 100px; padding:5px; background-color:lightgreen"><br><Br><br>
+		<button id = 'wordCount' type='submit' style="margin: 0;padding:10px;position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%); background-color:blue;color:white">Click to calculate word length</button>
+	</body>
+	<script>
+		document.querySelector('#wordCount').addEventListener('click',function(){
+			console.log("Button clicked");
+			var len = document.querySelector('#inputWord').value.length;
+			console.log(len);
+			var result = document.querySelector('#result');
+			result.type="text";
+			result.value = "The Length is "+len;
+		});
+	</script>
+</html>
